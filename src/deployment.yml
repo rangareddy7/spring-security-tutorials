@@ -1,0 +1,4 @@
+containers:
+  - name: app-yib-meta-api
+    image: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.10
+          
