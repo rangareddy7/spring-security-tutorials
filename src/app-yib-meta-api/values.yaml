@@ -1,0 +1,34 @@
+# Default values for app-yib-meta-api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+namespace: 307aeaa0-cbfa-471b-a4dd-828db3c34632
+#nodeSelector: #{}
+#  kubernetes.io/os: linux
+#  agentpool: multitnt
+#tolerations: #[]
+#  - key: "node"
+#    operator: "Equal"
+#    value: "multi-tenant"
+#    effect: "NoSchedule"
+appid: yib
+tenantname: yibpoc
+image:
+  repository: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api 
+  tag: latest
+imagePullSecrets: yib-acr-secret
+service:
+  name: app-yib-meta-api
+  port: 80
+  targetport: 80
+  type: NodePort
+resource:
+  limits:
+    memory: 500Mi
+    cpu: "0.5"
+  requests:
+    memory: 100Mi
+    cpu: "0.1"
+env:
+  name: ASPNETCORE_ENVIRONMENT
+  value: "Development"
