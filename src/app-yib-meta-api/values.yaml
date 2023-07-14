@@ -1,8 +1,8 @@
 # Default values for app-yib-meta-api.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-replicaCount: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.27
-namespace: 307aeaa0-cbfa-47ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.27
+replicaCount: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.28
+namespace: 307aeaa0-cbfa-47ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.28
 #nodeSelector: #{}
 #  kubernetes.io/os: linux
 #  agentpool: multitnt
@@ -15,7 +15,7 @@ appid: yib
 tenantname: yibpoc
 image:
   repository: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api 
-  tag: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.27
+  tag: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.28
 imagePullSecrets: yib-acr-secret
 service:
   name: app-yib-meta-api
@@ -27,8 +27,8 @@ resource:
     memory: 500Mi
     cpu: "0.5"
   requests:
-    memory: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.27
-    cpu: "0.ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.27
+    memory: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.28
+    cpu: "0.ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api:1.28
 env:
   name: ASPNETCORE_ENVIRONMENT
   value: "Development"
