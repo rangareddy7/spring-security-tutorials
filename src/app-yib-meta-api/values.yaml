@@ -15,7 +15,7 @@ appid: yib
 tenantname: yibpoc
 image:
   repository: ydxregistry.azurecr.io/apps-yib/apps-yib-meta-api 
-  tag: 1.65
+  tag: 1.66
 imagePullSecrets: yib-acr-secret
 service:
   name: app-yib-meta-api
