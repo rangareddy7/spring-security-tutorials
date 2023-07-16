@@ -30,7 +30,8 @@ jobs:
         kubectl get nodes
     - name: Deploy Helm chart
       run: |
-        helm upgrade --install my-release charts/hello-world
+        #helm upgrade --install my-release charts/hello-world
+        helm upgrade my-release charts/hello-world
         
     
     
