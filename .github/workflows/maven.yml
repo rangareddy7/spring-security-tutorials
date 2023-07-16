@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/deployment.yaml'
       - 'scripts/service.yaml'
+      - 'charts/hello-world/**'
       - '.github/workflows/maven.yml'
 
 jobs:
@@ -23,7 +24,10 @@ jobs:
         kubeconfig: ${{ secrets.KUBE_CONFIG_MSA2 }}
     - name: Get Kubernetes nodes
       run: |
-        kubectl get nodes  
+        kubectl get nodes
+    - name: Deploy Helm chart
+      run: |
+        helm upgrade --install my-release charts/hello-world
         
     
     
