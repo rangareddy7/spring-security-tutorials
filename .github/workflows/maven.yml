@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Set up Helm
+      uses: azure/setup-helm@v1
+      with:
+        helm-version: '3.x'
     - name: setting the azure kubernetes context
       uses: Azure/k8s-set-context@v1
       with:
