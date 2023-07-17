@@ -31,6 +31,6 @@ jobs:
     - name: Deploy Helm chart
       run: |
         #helm upgrade --install my-release charts/hello-world
-        helm upgrade app-yib-meta-api-service ./charts/hello-world  --install --wait --values=./charts/hello-world/values.yaml    
+        helm upgrade my-release ./charts/hello-world  --install --wait --values=./charts/hello-world/values.yaml    
     
     
