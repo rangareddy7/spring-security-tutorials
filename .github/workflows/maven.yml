@@ -20,7 +20,7 @@ jobs:
     - name: Set up Helm
       uses: azure/setup-helm@v1
       with:
-        helm-version: '3.x'
+        helm-version: '3.6.3'
     - name: setting the azure kubernetes context
       uses: Azure/k8s-set-context@v1
       with:
