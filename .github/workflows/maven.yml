@@ -30,8 +30,7 @@ jobs:
         kubectl get nodes
     - name: Deploy Helm chart
       run: |
-        helm upgrade --install my-release charts/hello-world
-
-        
+        #helm upgrade --install my-release charts/hello-world
+        helm upgrade app-yib-meta-api-service ./charts/hello-world  --install --wait --atomic --values=./charts/hello-world/values.yaml    
     
     
