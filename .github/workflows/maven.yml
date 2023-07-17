@@ -44,7 +44,7 @@ jobs:
     - name: Deploy
       uses: WyriHaximus/github-action-helm3@v2
       with:
-        exec: helm upgrade my-release ./charts/hello-world  --install --wait --atomic --values=./charts/hello-world/values.yamleln-tenant-service.yml
+        exec: helm upgrade my-release ./charts/hello-world  --install --wait --atomic --values=./charts/hello-world/values.yaml
         kubeconfig: '${{ secrets.KUBE_CONFIG_MSA2 }}'
   
     
