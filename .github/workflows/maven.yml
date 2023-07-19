@@ -41,11 +41,14 @@ jobs:
      # run: |
         #helm upgrade --install my-release charts/hello-world
       #  helm upgrade my-release ./charts/hello-world  --install --wait --values=./charts/hello-world/values.yaml
-    - name: Deploy
+    #- name: Deploy
+    #  uses: WyriHaximus/github-action-helm3@v2
+    #  with:
+    #    exec: helm upgrade my-release ./charts/hello-world  --install --wait --atomic --values=./charts/hello-world/values.yaml
+    #    kubeconfig: '${{ secrets.KUBE_CONFIG_MSA2 }}'
+    - name: Delete Helm Release
       uses: WyriHaximus/github-action-helm3@v2
       with:
-        exec: helm upgrade my-release ./charts/hello-world  --install --wait --atomic --values=./charts/hello-world/values.yaml
-        kubeconfig: '${{ secrets.KUBE_CONFIG_MSA2 }}'
-  
-    
+        exec: helm uninstall my-release
+        kubeconfig: ${{ secrets.KUBE_CONFIG_MSA2 }}    
     
