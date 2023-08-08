@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: '*/6 * * * *'
   workflow_dispatch:
+    branches:
+      - main
     #paths:
     #  - 'scripts/deployment.yaml'
     #  - 'scripts/service.yaml'
