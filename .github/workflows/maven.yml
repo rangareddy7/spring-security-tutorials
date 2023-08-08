@@ -1,16 +1,20 @@
 name: Web Api (CI/CD)
 
+#on:
+#  push:
+#    branches: [master, main]
 on:
-  push:
-    branches: [master, main]
-    paths:
-      - 'scripts/deployment.yaml'
-      - 'scripts/service.yaml'
-      - 'charts/hello-world/**'
-      - 'charts/hello-world/values.yaml'
-      - 'charts/hello-world/templates/deployment.yaml'
-      - 'charts/hello-world/templates/service.yaml'
-      - '.github/workflows/maven.yml'
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 10 * * *'    
+    #paths:
+    #  - 'scripts/deployment.yaml'
+    #  - 'scripts/service.yaml'
+    #  - 'charts/hello-world/**'
+    #  - 'charts/hello-world/values.yaml'
+    #  - 'charts/hello-world/templates/deployment.yaml'
+    #  - 'charts/hello-world/templates/service.yaml'
+    #  - '.github/workflows/maven.yml'
 
 jobs:
   deploy:
