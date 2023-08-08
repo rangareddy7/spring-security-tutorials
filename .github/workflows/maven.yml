@@ -4,9 +4,9 @@ name: Web Api (CI/CD)
 #  push:
 #    branches: [master, main]
 on:
-  workflow_dispatch:  # Manual trigger
   schedule:
-    - cron: "*/5 * * * *"    
+    - cron: '*/5 * * * *'
+  workflow_dispatch:  # Manual trigger 
     #paths:
     #  - 'scripts/deployment.yaml'
     #  - 'scripts/service.yaml'
