@@ -5,7 +5,7 @@ name: Web Api (CI/CD)
 #    branches: [master, main]
 on:
   schedule:
-    - cron: '37 6 * * *'
+    - cron: '43 6 * * *'
   workflow_dispatch:  # Manual trigger 
     #paths:
     #  - 'scripts/deployment.yaml'
