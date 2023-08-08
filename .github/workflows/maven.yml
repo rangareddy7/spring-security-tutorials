@@ -1,11 +1,11 @@
-name: Web Api (CI/CD)
+name: Web Api test (CI/CD)
 
 #on:
 #  push:
 #    branches: [master, main]
 on:
   schedule:
-    - cron: '*/7 * * * *'
+    - cron: '*/6 * * * *'
   workflow_dispatch:
     #paths:
     #  - 'scripts/deployment.yaml'
