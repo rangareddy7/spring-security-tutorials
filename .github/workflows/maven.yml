@@ -5,7 +5,7 @@ name: Web Api (CI/CD)
 #    branches: [master, main]
 on:
   schedule:
-    - cron: */1 * * * *
+    - cron: '*/1 * * * *'
   workflow_dispatch:
     branches:
       - main
